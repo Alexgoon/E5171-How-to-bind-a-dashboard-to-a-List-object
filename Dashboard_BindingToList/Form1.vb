@@ -1,6 +1,5 @@
 ﻿Imports DevExpress.DashboardCommon
 Imports DevExpress.XtraEditors
-Imports DevExpress.DataAccess
 
 Namespace Dashboard_BindingToList
     Partial Public Class Form1
@@ -8,6 +7,7 @@ Namespace Dashboard_BindingToList
 
         Public Sub New()
             InitializeComponent()
+            Dim t As Integer=77777
         End Sub
 
         Private Sub Form1_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles MyBase.Load
@@ -36,16 +36,13 @@ Namespace Dashboard_BindingToList
         End Sub
 
         ' Handles the DashboardViewer.DataLoading event to provide the dashboard with new data.
-        Private Sub dashboardViewer1_DataLoading(ByVal sender As Object, _
-                                                 ByVal e As DataLoadingEventArgs) _
-                                             Handles dashboardViewer1.DataLoading
+        Private Sub dashboardViewer1_DataLoading(ByVal sender As Object, ByVal e As DevExpress.DataAccess.DataLoadingEventArgs) Handles dashboardViewer1.DataLoading
             If e.DataSourceName = "Data Source 1" Then
                 e.Data = Data.CreateData()
             End If
         End Sub
 
-        Private Sub button1_Click(ByVal sender As Object, ByVal e As System.EventArgs) _
-            Handles button1.Click
+        Private Sub button1_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles button1.Click
             ' Reloads data in data sources.
             dashboardViewer1.ReloadData()
         End Sub
