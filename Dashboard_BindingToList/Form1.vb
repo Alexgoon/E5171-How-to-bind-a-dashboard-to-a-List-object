@@ -7,7 +7,7 @@ Namespace Dashboard_BindingToList
 
 		Public Sub New()
 			InitializeComponent()
-			Dim t As Integer=4
+			Dim t As Integer=5
 		End Sub
 
 		Private Sub Form1_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles MyBase.Load
