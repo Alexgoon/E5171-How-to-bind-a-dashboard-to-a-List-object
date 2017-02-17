@@ -7,8 +7,6 @@ Namespace Dashboard_BindingToList
 
 		Public Sub New()
 			InitializeComponent()
-			Dim t As Integer=256
-			t += 1
 		End Sub
 
 		Private Sub Form1_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles MyBase.Load
